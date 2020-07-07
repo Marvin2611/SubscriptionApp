@@ -3,7 +3,7 @@ package com.example.subscriptionapp
 import java.util.Date
 import java.util.Calendar
 
-//OLD CLASS OUTDATED USE AboViewModel
+//OLD CLASS OUTDATED USE AboViewModel sds
 class Abo{
     public var name : String = ""                                     //Name of the abonnement
     public var abo_variant : Int = -1                                 //Period time span in days

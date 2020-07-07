@@ -55,7 +55,7 @@ class Calculator(abos: List<AboViewModel>) {
         return tmp
     }
 
-    //The subscription with the lowest cost
+    //The subscription with the lowest costs
     fun GetHighest(abo:AboViewModel):Double{
         var tmp: Double = abo.costsPerMonth
         list.forEach {

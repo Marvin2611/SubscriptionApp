@@ -9,7 +9,7 @@ data class AboViewModel(
     var starting_day : Date = Calendar.getInstance().getTime(),
     var run_time : Int = 1,
     var color : String = "#FFFFFF",
-    //ResultsFromCalculator
+    //ResultsFromCalculators
     var costsPerDay:Double=0.0,
     var costsPerWeek:Double=0.0,
     var costsPerMonth:Double=0.0,

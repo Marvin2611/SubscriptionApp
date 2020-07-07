@@ -1,8 +1,5 @@
 package com.example.subscriptionapp
 
-import java.util.Collections
-import java.util.Collections.list
-
 class AboList(val aboList: MutableList<AboViewModel>) {
 
     public fun addAbo(abo: AboViewModel){

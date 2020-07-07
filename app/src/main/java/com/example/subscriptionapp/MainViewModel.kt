@@ -4,7 +4,7 @@ import java.util.*
 import java.util.Collections.list
 
 class MainViewModel {
-    //This should maybe be read from a file
+    //This should maybe be read from a file add
     val list = mutableListOf<AboViewModel>()
     val abos = AboList(list)
     val stats = Calculator(list)
