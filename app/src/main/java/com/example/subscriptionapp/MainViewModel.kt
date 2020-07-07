@@ -1,6 +1,5 @@
 package com.example.subscriptionapp
 
-import androidx.compose.Model
 import java.util.*
 import java.util.Collections.list
 
