@@ -1,4 +1,4 @@
-package com.example.abomanager
+package com.example.subscriptionapp
 
 import kotlin.math.round
 

@@ -1,4 +1,4 @@
-package com.example.abomanager
+package com.example.subscriptionapp
 
 import java.util.Date
 import java.util.Calendar
@@ -13,11 +13,11 @@ class Abo{
     public var color : String = "FFFFFF"                              //Color is given in hexadecimal
 
     //region "Add Functionality"
-    public fun Add_Name(name : String){
+    public fun add_Name(name : String){
         this.name = name;
     }
 
-    public fun Add_Abo_Variant(choice : Int){
+    public fun add_Abo_Variant(choice : Int){
         if(choice in 1..10000){
             abo_variant = choice
         }
@@ -26,7 +26,7 @@ class Abo{
         }
     }
 
-    public fun Add_Cost(amount : Double){
+    public fun add_Cost(amount : Double){
         if(amount in 0.01..10000.0){
             cost = amount
         }
@@ -35,11 +35,11 @@ class Abo{
         }
     }
 
-    public fun Add_Starting_Day(begin : Date){
+    public fun add_Starting_Day(begin : Date){
         starting_day = begin
     }
 
-    public fun Add_Run_Time(periods : Int){
+    public fun add_Run_Time(periods : Int){
         if(periods in 1..10000){
             run_time = periods
         }
@@ -48,7 +48,7 @@ class Abo{
         }
     }
 
-    public fun Add_Color(hex : String){
+    public fun add_Color(hex : String){
         //Check ist unvollstaendig!
         if(hex.length == 6){
             color = hex

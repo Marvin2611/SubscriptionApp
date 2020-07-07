@@ -1,4 +1,4 @@
-package com.example.abomanager
+package com.example.subscriptionapp
 
 class GColors {
     var blue: String = ""
