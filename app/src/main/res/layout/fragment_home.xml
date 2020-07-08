@@ -40,50 +40,50 @@
             android:layout_height="wrap_content">
 
             <TextView
-                android:id="@+id/textView1"
+                android:id="@+id/active_subscriptions"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_weight=".70"
                 android:text="@string/text_AboCount" />
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/active_subscriptions_value"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_weight=".30"
-                android:text="TextView" />
+                android:text="" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-                android:id="@+id/textView3"
+                android:id="@+id/total_cost"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_weight=".70"
                 android:text="@string/text_TotalSumPerMonth" />
             <TextView
-                android:id="@+id/textView4"
+                android:id="@+id/total_cost_value"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_weight=".30"
-                android:text="TextView" />
+                android:text="" />
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/average_cost"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_weight=".70"
                 android:text="@string/text_AveragePerMonth" />
             <TextView
-                android:id="@+id/textView6"
+                android:id="@+id/average_cost_value"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_weight=".30"
-                android:text="TextView" />
+                android:text="" />
 
         </LinearLayout>
 

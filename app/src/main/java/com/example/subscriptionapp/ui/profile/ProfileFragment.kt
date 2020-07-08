@@ -24,6 +24,8 @@ class ProfileFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_profile, container, false)
 
 
+
+
         return root
     }
 }
