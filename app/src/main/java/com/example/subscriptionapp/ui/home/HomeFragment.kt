@@ -90,6 +90,5 @@ class HomeFragment : Fragment() {
         item.text = model.stats.AboCount().toString()
         item2.text = model.stats.average.toString()
         v.pieChart.centerText = model.stats.TotalSum.toString()
-
     }
 }

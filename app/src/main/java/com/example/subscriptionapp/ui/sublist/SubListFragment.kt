@@ -44,17 +44,5 @@ class SubListFragment : Fragment() {
 
         return root
     }
-
-    fun tESTET(){
-        for (x in 0..10) {
-            aboName.add("DIES IST EIN TESTOBHEKT: " + x)
-        }
-    }
-
-    fun SplitModel() {
-        model.list.forEach(){
-            aboName.add(it.name)
-        }
-    }
 }
 
