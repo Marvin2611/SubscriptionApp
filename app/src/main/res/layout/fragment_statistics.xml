@@ -16,17 +16,17 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@string/stat_month"
+            android:id="@+id/costPerMonth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cost per Month"
+            android:text="@string/stat_month"
             android:textColor="#000000" />
 
         <TextView
             android:id="@+id/costPerMonthValue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text=""
             android:textColor="#000000" />
 
         <TextView
@@ -35,17 +35,17 @@
             android:layout_height="wrap_content" />
 
         <TextView
-            android:id="@string/stat_year"
+            android:id="@+id/costPerYear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cost per year"
+            android:text="@string/stat_year"
             android:textColor="#000000" />
 
         <TextView
             android:id="@+id/costPerYearValue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text=""
             android:textColor="#000000" />
 
         <TextView
@@ -55,17 +55,17 @@
             android:textColor="#000000" />
 
         <TextView
-            android:id="@string/stat_most_expensive"
+            android:id="@+id/mostExpensive"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Most expensive Abo"
+            android:text="@string/stat_most_expensive"
             android:textColor="#000000" />
 
         <TextView
             android:id="@+id/mostExpensiveValue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text=""
             android:textColor="#000000" />
 
         <TextView
@@ -74,17 +74,17 @@
             android:layout_height="wrap_content" />
 
         <TextView
-            android:id="@string/stat_cheapest"
+            android:id="@+id/cheapest"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Cheapest Abo"
+            android:text="@string/stat_cheapest"
             android:textColor="#000000" />
 
         <TextView
             android:id="@+id/cheapestValue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text=""
             android:textColor="#000000" />
 
         <TextView
@@ -93,17 +93,17 @@
             android:layout_height="wrap_content" />
 
         <TextView
-            android:id="@string/stat_average"
+            android:id="@+id/average"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Average cost per Abo"
+            android:text="@string/stat_average"
             android:textColor="#000000" />
 
         <TextView
             android:id="@+id/averageValue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="TextView"
+            android:text=""
             android:textColor="#000000" />
 
         <TextView
