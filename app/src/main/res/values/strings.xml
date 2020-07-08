@@ -12,8 +12,18 @@
     <string name="text_AveragePerMonth">Average Cost:</string>
     <string name="text_AboCount">Active Subscriptions:</string>
     <string name="text_Language">Language:</string>
+    <string name="text_lan_de">DE</string>
+    <string name="text_lan_en">EN</string>
+    <string name="text_lan_ch">CH</string>
 
     <string name="profile_color">Color: </string>
+    <string name="profile_darkMode">Dark Mode:</string>
+    <string name="profile_r">R</string>
+    <string name="profile_g">G</string>
+    <string name="profile_b">B</string>
+    <string name="profile_y">Y</string>
+    <string name="profile_p">P</string>
+    <string name="profile_d">D</string>
 
     <string name="stat_month">Cost per Month:</string>
     <string name="stat_year">Cost per Year:</string>
