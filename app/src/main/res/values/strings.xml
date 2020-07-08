@@ -11,6 +11,9 @@
     <string name="text_TotalSumPerMonth">Total Cost:</string>
     <string name="text_AveragePerMonth">Average Cost:</string>
     <string name="text_AboCount">Active Subscriptions:</string>
+    <string name="text_Language">Language:</string>
+
+    <string name="profile_color">Color: </string>
 
     <string name="stat_month">Cost per Month:</string>
     <string name="stat_year">Cost per Year:</string>
