@@ -67,7 +67,8 @@ class HomeFragment : Fragment() {
         view.pieChart.data = pieData
 
         view.pieChart.setUsePercentValues(true)
-        view.pieChart.isDrawHoleEnabled = false
+        view.pieChart.isDrawHoleEnabled = true
         view.pieChart.description.isEnabled = false
+        view.pieChart.centerText = "test"
     }
 }
