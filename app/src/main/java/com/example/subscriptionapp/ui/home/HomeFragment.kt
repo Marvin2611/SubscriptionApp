@@ -48,9 +48,11 @@ class HomeFragment : Fragment() {
         val pieChart: PieChart = root.findViewById(R.id.pieChart);
         setPieChartData(view = root.rootView)
 
-        //Show active subscription
+        //Show active subscriptions
+        val avg: TextView = root.findViewById(R.id.average_cost_value)
         val sub: TextView = root.findViewById(R.id.active_subscriptions_value)
-        UpdateLayout(sub, root.rootView)
+        UpdateLayout(sub, avg, root.rootView)
+
 
         return root
     }
@@ -61,9 +63,7 @@ class HomeFragment : Fragment() {
         val listColors = ArrayList<Int>()
 
         //Add PieChart Data here
-        listPie.add(PieEntry(20F, "Pass"))
-        listPie.add(PieEntry(50F, "Fail"))
-        listPie.add(PieEntry(30F, "Unanswered"))
+        AddPieChart(view, listPie)
         listColors.add(resources.getColor(R.color.colorPrimary))
 
         //Connect colors to the PieChart
@@ -80,8 +80,16 @@ class HomeFragment : Fragment() {
         view.pieChart.centerText = "test"
     }
 
-    fun UpdateLayout(item: TextView, v: View){
+    fun AddPieChart(v: View, pieEntry: ArrayList<PieEntry>) {
+        model.list.forEach(){
+            pieEntry.add(PieEntry(it.PercentageCost.toFloat(), it.name))
+        }
+    }
+
+    fun UpdateLayout(item: TextView,item2: TextView, v: View){
         item.text = model.stats.AboCount().toString()
+        item2.text = model.stats.average.toString()
         v.pieChart.centerText = model.stats.TotalSum.toString()
+
     }
 }

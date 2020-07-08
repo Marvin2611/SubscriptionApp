@@ -39,8 +39,8 @@ class MainViewModel : ViewModel(){
         stats.CostPerWeek(abo)
         stats.GetPercentages(abo)
         stats.TotalSumPerDay()
-        stats.GetHighest(abo)
-        stats.GetLowest(abo)
+        stats.GetHighest()
+        stats.GetLowest()
         stats.GetPercentages(abo)
         stats.GetAverage()
     }

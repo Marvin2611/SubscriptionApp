@@ -1,6 +1,7 @@
 package com.example.subscriptionapp.ui.statistics
 
 import android.os.Bundle
+import android.text.style.UpdateLayout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -29,20 +30,21 @@ class StatisticsFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_statistics, container, false)
 
         val costPerMonthValue: TextView = root.findViewById(R.id.costPerMonthValue)
-        costPerMonthValue.text = "11€"
-
         val costPerYearValue: TextView = root.findViewById(R.id.costPerYearValue)
-        costPerYearValue.text = "132€"
-
         val highestValue: TextView = root.findViewById(R.id.mostExpensiveValue)
-        highestValue.text = "11€"
-
         val lowestValue: TextView = root.findViewById(R.id.cheapestValue)
-        lowestValue.text = "11€"
-
         val averageValue: TextView = root.findViewById(R.id.averageValue)
-        averageValue.text = "11€"
+
+        UpdateLayout(costPerMonthValue, costPerYearValue, highestValue, lowestValue, averageValue)
 
         return root
+    }
+
+    fun UpdateLayout(pmV: TextView, pyV: TextView, hV: TextView, lV: TextView, aV: TextView) {
+        pmV.text = model.stats.costPerMonthAll.toString()
+        pyV.text = model.stats.costPerYearAll.toString()
+        hV.text = model.stats.GetHighest().toString()
+        lV.text= model.stats.GetLowest().toString()
+        aV.text = model.stats.GetAverage().toString()
     }
 }
