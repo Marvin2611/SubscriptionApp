@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
+import com.example.subscriptionapp.AboViewModel
 import com.example.subscriptionapp.MainViewModel
 import com.example.subscriptionapp.R
 import org.w3c.dom.Text
@@ -41,6 +42,11 @@ class SubListFragment : Fragment() {
         button2.setOnClickListener{
             Toast.makeText(activity?.applicationContext,"How many items: " + model.list.count(), Toast.LENGTH_SHORT).show()
         }
+
+        val listView: ListView = root.findViewById(R.id.sublist_view)
+
+        val adapter:ArrayAdapter<AboViewModel> = ArrayAdapter(root.context,android.R.layout.simple_list_item_1,model.list)
+        listView.adapter = adapter
 
         return root
     }
