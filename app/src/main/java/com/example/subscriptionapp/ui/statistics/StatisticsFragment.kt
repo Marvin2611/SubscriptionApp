@@ -12,6 +12,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.subscriptionapp.MainViewModel
 import com.example.subscriptionapp.R
+import kotlinx.android.synthetic.main.fragment_statistics.*
 
 class StatisticsFragment : Fragment() {
 

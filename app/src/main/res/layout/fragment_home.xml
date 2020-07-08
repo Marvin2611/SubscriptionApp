@@ -27,13 +27,6 @@
                 android:adjustViewBounds="true"
                 android:src="@drawable/ic_banner_foreground" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight=".80"
-                android:text="Settings">
-
-            </Button>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
