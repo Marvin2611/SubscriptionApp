@@ -22,10 +22,7 @@ class StatisticsFragment : Fragment(){
         statisticsViewModel =
             ViewModelProviders.of(this).get(StatisticsViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_statistics, container, false)
-        val textView: TextView = root.findViewById(R.id.text_statistics)
-        statisticsViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
+
         return root
     }
 }
