@@ -11,4 +11,10 @@
     <string name="text_TotalSumPerMonth">Total Cost:</string>
     <string name="text_AveragePerMonth">Average Cost:</string>
     <string name="text_AboCount">Active Subscriptions:</string>
+
+    <string name="stat_month">Cost per Month:</string>
+    <string name="stat_year">Cost per Year:</string>
+    <string name="stat_most_expensive">Most expensive Subscriptions:</string>
+    <string name="stat_cheapest">Cheapest Subscriptions:</string>
+    <string name="stat_average">Average Subscription cost:</string>
 </resources>
