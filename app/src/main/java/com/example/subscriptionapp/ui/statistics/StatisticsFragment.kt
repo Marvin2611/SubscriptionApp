@@ -10,7 +10,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.subscriptionapp.R
 
-class StatisticsFragment : Fragment(){
+class StatisticsFragment : Fragment() {
 
     private lateinit var statisticsViewModel: StatisticsViewModel
 
@@ -19,29 +19,26 @@ class StatisticsFragment : Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         statisticsViewModel = ViewModelProviders.of(this).get(StatisticsViewModel::class.java)
 
         val root = inflater.inflate(R.layout.fragment_statistics, container, false)
 
-        val monthValue: TextView = root.findViewById(R.id.text_profile)
-        statisticsViewModel.costPerMonthValue.observe(viewLifecycleOwner, Observer {
-            monthValue.text = it
-        })
+        val costPerMonthValue: TextView = root.findViewById(R.id.costPerMonthValue)
+        costPerMonthValue.text = "11€"
 
-        val yearValue: TextView = root.findViewById(R.id.text_profile)
-        statisticsViewModel.costPerYearValue.observe(viewLifecycleOwner, Observer {
-            yearValue.text = it
-        })
+        val costPerYearValue: TextView = root.findViewById(R.id.costPerYearValue)
+        costPerYearValue.text = "132€"
 
-        val mostExpensiveValue: TextView = root.findViewById(R.id.text_profile)
-        statisticsViewModel.costOfMostExpensiveValue.observe(viewLifecycleOwner, Observer {
-            mostExpensiveValue.text = it
-        })
+        val highestValue: TextView = root.findViewById(R.id.mostExpensiveValue)
+        highestValue.text = "11€"
 
-        val cheapestValue: TextView = root.findViewById(R.id.text_profile)
-        statisticsViewModel.costOfCheapestValue.observe(viewLifecycleOwner, Observer {
-            cheapestValue.text = it
-        })
+        val lowestValue: TextView = root.findViewById(R.id.cheapestValue)
+        lowestValue.text = "11€"
+
+        val averageValue: TextView = root.findViewById(R.id.averageValue)
+        averageValue.text = "11€"
+
         return root
     }
 }
