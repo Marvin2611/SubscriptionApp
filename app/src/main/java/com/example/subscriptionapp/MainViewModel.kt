@@ -42,6 +42,5 @@ class MainViewModel {
         stats.GetLowest(abo)
         stats.GetPercentages(abo)
         stats.GetAverage()
-
     }
 }

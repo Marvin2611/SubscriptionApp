@@ -19,7 +19,7 @@ class SubListAddFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         subListAddViewModel =
             ViewModelProviders.of(this).get(SubListAddViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_sublistadd, container, false)

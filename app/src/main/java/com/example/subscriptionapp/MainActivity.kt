@@ -2,6 +2,7 @@ package com.example.subscriptionapp
 
 import android.os.Bundle
 import android.widget.EditText
+import androidx.activity.viewModels
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -15,6 +16,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val navView: BottomNavigationView = findViewById(R.id.nav_view)
+
+        val fragmentManager = supportFragmentManager
 
         val navController = findNavController(R.id.nav_host_fragment)
         /*val testText: EditText=findViewById(R.id.TestText)
