@@ -6,13 +6,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.example.subscriptionapp.MainViewModel
 import com.example.subscriptionapp.R
 
 class StatisticsFragment : Fragment() {
 
     private lateinit var statisticsViewModel: StatisticsViewModel
+
+    val model: MainViewModel by activityViewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,

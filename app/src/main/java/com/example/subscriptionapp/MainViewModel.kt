@@ -1,15 +1,16 @@
 package com.example.subscriptionapp
 
+import androidx.lifecycle.ViewModel
 import java.util.*
 import java.util.Collections.list
 
-class MainViewModel {
+class MainViewModel : ViewModel(){
     //This should maybe be read from a file add
-    val list = mutableListOf<AboViewModel>()
-    val abos = AboList(list)
-    val stats = Calculator(list)
+    var list = mutableListOf<AboViewModel>()
+    var abos = AboList(list)
+    var stats = Calculator(list)
 
-    constructor() {
+    /*constructor() {
         list.add(AboViewModel("Netflix", 30,15.99, Calendar.getInstance().getTime(),1,"#053225"))
         updateAbo(list[list.count()-1])
         list.add(AboViewModel("Amazon Prime", 365,34.99, Calendar.getInstance().getTime(),1,"#053225"))
@@ -25,7 +26,7 @@ class MainViewModel {
         list.forEach {
            updateAbo(it)
         }
-    }
+    }*/
 
     fun updateList() {
 
