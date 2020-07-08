@@ -37,6 +37,11 @@ class SubListFragment : Fragment() {
             findNavController().navigate(R.id.action_navigation_sublist_to_navigation_sublistadd)
         }
 
+        val button2 = root.findViewById(R.id.navigation_sublist_amount) as Button
+        button2.setOnClickListener{
+            Toast.makeText(activity?.applicationContext,"How many items: " + model.list.count(), Toast.LENGTH_SHORT).show()
+        }
+
         return root
     }
 

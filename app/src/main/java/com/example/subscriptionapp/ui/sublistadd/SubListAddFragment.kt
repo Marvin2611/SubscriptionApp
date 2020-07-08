@@ -116,7 +116,7 @@ class SubListAddFragment : Fragment() {
         catch(error: Error) {
             Toast.makeText(activity?.applicationContext,"Error: " + error, Toast.LENGTH_SHORT).show()
         }
-        
+
         try {
             aboViewModelTemplate.cost = cost.toDouble()
         }
