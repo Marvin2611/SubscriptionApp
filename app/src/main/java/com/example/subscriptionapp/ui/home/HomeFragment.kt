@@ -15,16 +15,11 @@ import com.github.mikephil.charting.data.PieData
 import com.github.mikephil.charting.data.PieDataSet
 import com.github.mikephil.charting.data.PieEntry
 import com.github.mikephil.charting.utils.ColorTemplate
+import kotlinx.android.synthetic.main.fragment_home.view.*
 
 class HomeFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
-
-    val pieChart: PieChart = TODO()
-    val pieData: PieData = PieData(pieDataSet)
-    val pieDataSet: PieDataSet = PieDataSet(pieEntries, "")
-    val pieEntries: ArrayList<PieEntry>
-    val pieEntryLabels: ArrayList<PieEntry>
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -34,27 +29,36 @@ class HomeFragment : Fragment() {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
 
-        pieChart.setData(pieData)
-        pieDataSet.setSliceSpace(2f)
-        pieDataSet.setValueTextColor(Color.WHITE);
-        pieDataSet.setValueTextSize(10f);
-        pieDataSet.setSliceSpace(5f);
+        //Add the PieChart here as a value
+        val pieChart: PieChart = root.findViewById(R.id.pieChart);
+        setPieChartData(view = root.rootView)
+
 
         return root
     }
 
-    fun getEntries() {
-        val pieEntries: ArrayList<PieEntry> = ArrayList()
-        pieEntries.add(PieEntry(2f, 1))
-        pieEntries.add(PieEntry(4f, 1))
-        pieEntries.add(PieEntry(6f, 2))
-        pieEntries.add(PieEntry(8f, 3))
-        pieEntries.add(PieEntry(7f, 4))
-        pieEntries.add(PieEntry(3f, 5))
+    //Set the PieChart Data
+    fun setPieChartData(view: View) {
+        val listPie = ArrayList<PieEntry>()
+        val listColors = ArrayList<Int>()
+
+        //Add PieChart Data here
+        listPie.add(PieEntry(20F, "Pass"))
+        listPie.add(PieEntry(50F, "Fail"))
+        listPie.add(PieEntry(30F, "Unanswered"))
+        listColors.add(resources.getColor(R.color.colorPrimary))
+
+        //Connect colors to the PieChart
+        val pieDataSet = PieDataSet(listPie, "")
+        pieDataSet.colors = listColors
+
+        //Connect data to the PieChart
+        val pieData = PieData(pieDataSet)
+        view.pieChart.data = pieData
+
+        view.pieChart.setUsePercentValues(true)
+        view.pieChart.isDrawHoleEnabled = false
+        view.pieChart.description.isEnabled = false
     }
 }
