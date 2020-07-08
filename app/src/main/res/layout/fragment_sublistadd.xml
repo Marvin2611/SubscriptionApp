@@ -33,6 +33,7 @@
                    android:layout_weight=".8"
                    android:text="Name"/>
                <EditText
+                   android:id="@+id/addlistelement_name"
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
                    android:layout_weight=".2"
@@ -49,6 +50,7 @@
                     android:layout_weight=".8"
                     android:text="Periode"/>
                 <EditText
+                    android:id="@+id/addlistelement_period"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight=".2"
@@ -65,6 +67,7 @@
                     android:layout_weight=".8"
                     android:text="Kosten"/>
                 <EditText
+                    android:id="@+id/addlistelement_cost"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight=".2"
@@ -81,11 +84,12 @@
                     android:layout_weight=".8"
                     android:text="Farbe"/>
                 <EditText
+                    android:id="@+id/addlistelement_color"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight=".2"
                     android:ems="10"
-                    android:inputType="textPersonName" />
+                    android:inputType="textPersonName"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -106,6 +110,7 @@
                     android:layout_weight=".8"
                     android:text="Name:"/>
                 <TextView
+                    android:id="@+id/listelement_name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Hier Name"
@@ -121,6 +126,7 @@
                     android:layout_weight=".8"
                     android:text="Periode:"/>
                 <TextView
+                    android:id="@+id/listelement_period"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Hier Periode"
@@ -131,11 +137,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
                 <TextView
+
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight=".8"
                     android:text="Kosten:"/>
                 <TextView
+                    android:id="@+id/listelement_cost"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Hier Kosten"
@@ -151,18 +159,17 @@
                     android:layout_weight=".8"
                     android:text="Farbe:"/>
                 <TextView
+                    android:id="@+id/listelement_color"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Hier Farbe"
                     android:layout_weight=".2"/>
             </LinearLayout>
             <Button
+                android:id="@+id/addlistelement_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Submit!!!"/>
-
-
-
 
         </LinearLayout>
     </FrameLayout>
