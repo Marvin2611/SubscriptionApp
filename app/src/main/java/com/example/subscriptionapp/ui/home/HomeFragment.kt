@@ -21,9 +21,9 @@ class HomeFragment : Fragment() {
     private lateinit var homeViewModel: HomeViewModel
 
     val pieChart: PieChart = TODO()
-    val pieData: PieData = PieData()
-    val pieDataSet: PieDataSet = TODO()
-    var pieEntries: ArrayList<PieEntry>
+    val pieData: PieData = PieData(pieDataSet)
+    val pieDataSet: PieDataSet = PieDataSet(pieEntries, "")
+    val pieEntries: ArrayList<PieEntry>
     val pieEntryLabels: ArrayList<PieEntry>
 
     override fun onCreateView(
@@ -38,15 +38,14 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
-        return root
 
-        pieDataSet = PieDataSet(pieEntries, "")
-        pieData = PieData(pieDataSet)
         pieChart.setData(pieData)
         pieDataSet.setSliceSpace(2f)
         pieDataSet.setValueTextColor(Color.WHITE);
         pieDataSet.setValueTextSize(10f);
         pieDataSet.setSliceSpace(5f);
+
+        return root
     }
 
     fun getEntries() {
