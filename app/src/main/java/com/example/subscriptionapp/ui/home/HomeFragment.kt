@@ -30,6 +30,15 @@ class HomeFragment : Fragment() {
                 ViewModelProviders.of(this).get(HomeViewModel::class.java)
         val root = inflater.inflate(R.layout.fragment_home, container, false)
 
+        val activeSubscriptionValue: TextView = root.findViewById(R.id.active_subscriptions_value)
+        activeSubscriptionValue.text = "5"
+
+        val totalCostPerMonthValue: TextView = root.findViewById(R.id.total_cost_value)
+        totalCostPerMonthValue.text = "55€"
+
+        val averageCostPerSubPerMonthValue: TextView = root.findViewById(R.id.average_cost_value)
+        averageCostPerSubPerMonthValue.text = "11€"
+
         //Add the PieChart here as a value
         val pieChart: PieChart = root.findViewById(R.id.pieChart);
         setPieChartData(view = root.rootView)
@@ -58,7 +67,8 @@ class HomeFragment : Fragment() {
         view.pieChart.data = pieData
 
         view.pieChart.setUsePercentValues(true)
-        view.pieChart.isDrawHoleEnabled = false
+        view.pieChart.isDrawHoleEnabled = true
         view.pieChart.description.isEnabled = false
+        view.pieChart.centerText = "test"
     }
 }
