@@ -48,8 +48,9 @@ class HomeFragment : Fragment() {
         val pieChart: PieChart = root.findViewById(R.id.pieChart);
         setPieChartData(view = root.rootView)
 
+        //Show active subscription
         val sub: TextView = root.findViewById(R.id.active_subscriptions_value)
-        UpdateLayout(sub)
+        UpdateLayout(sub, root.rootView)
 
         return root
     }
@@ -79,7 +80,8 @@ class HomeFragment : Fragment() {
         view.pieChart.centerText = "test"
     }
 
-    fun UpdateLayout(item: TextView){
-        item.text = model.list.count().toString()
+    fun UpdateLayout(item: TextView, v: View){
+        item.text = model.stats.AboCount().toString()
+        v.pieChart.centerText = model.stats.TotalSum.toString()
     }
 }
