@@ -4,4 +4,7 @@
     <string name="title_statistics">Statistics</string>
     <string name="title_profile">Profile</string>
     <string name="title_sublist">Subscriptions</string>
+    <string name="title_sublistadd">Add Subscription</string>
+
+    <string name="button_sublistadd">Add Sub</string>
 </resources>
