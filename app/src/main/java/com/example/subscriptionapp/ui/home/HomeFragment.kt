@@ -1,5 +1,6 @@
 package com.example.subscriptionapp.ui.home
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,10 +10,21 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.subscriptionapp.R
+import com.github.mikephil.charting.charts.PieChart
+import com.github.mikephil.charting.data.PieData
+import com.github.mikephil.charting.data.PieDataSet
+import com.github.mikephil.charting.data.PieEntry
+import com.github.mikephil.charting.utils.ColorTemplate
 
 class HomeFragment : Fragment() {
 
     private lateinit var homeViewModel: HomeViewModel
+
+    val pieChart: PieChart = TODO()
+    val pieData: PieData = PieData(pieDataSet)
+    val pieDataSet: PieDataSet = PieDataSet(pieEntries, "")
+    val pieEntries: ArrayList<PieEntry>
+    val pieEntryLabels: ArrayList<PieEntry>
 
     override fun onCreateView(
             inflater: LayoutInflater,
@@ -26,6 +38,23 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
+
+        pieChart.setData(pieData)
+        pieDataSet.setSliceSpace(2f)
+        pieDataSet.setValueTextColor(Color.WHITE);
+        pieDataSet.setValueTextSize(10f);
+        pieDataSet.setSliceSpace(5f);
+
         return root
+    }
+
+    fun getEntries() {
+        val pieEntries: ArrayList<PieEntry> = ArrayList()
+        pieEntries.add(PieEntry(2f, 1))
+        pieEntries.add(PieEntry(4f, 1))
+        pieEntries.add(PieEntry(6f, 2))
+        pieEntries.add(PieEntry(8f, 3))
+        pieEntries.add(PieEntry(7f, 4))
+        pieEntries.add(PieEntry(3f, 5))
     }
 }
