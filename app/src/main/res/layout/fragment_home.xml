@@ -14,9 +14,6 @@
         tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="1dp">
 
-
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -28,7 +25,7 @@
                 android:layout_weight=".20"
                 android:scaleType="centerCrop"
                 android:adjustViewBounds="true"
-                tools:src="@tools:sample/backgrounds/scenic" />
+                android:src="@drawable/ic_banner_foreground" />
 
             <Button
                 android:layout_width="match_parent"
@@ -90,9 +87,10 @@
         </LinearLayout>
 
         <com.github.mikephil.charting.charts.PieChart
-            android:id = "@+id/pieChart"
-            android:layout_width = "fill_parent"
-            android:layout_height = "fill_parent" />
+            android:id="@+id/pieChart"
+            android:layout_width="fill_parent"
+            android:layout_height="300dp"
+            android:background="#FFFFFF" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
