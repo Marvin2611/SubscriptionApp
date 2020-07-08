@@ -2,6 +2,7 @@ package com.example.subscriptionapp.ui.home
 
 import android.graphics.Color
 import android.os.Bundle
+import android.text.style.UpdateLayout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -47,6 +48,8 @@ class HomeFragment : Fragment() {
         val pieChart: PieChart = root.findViewById(R.id.pieChart);
         setPieChartData(view = root.rootView)
 
+        val sub: TextView = root.findViewById(R.id.active_subscriptions_value)
+        UpdateLayout(sub)
 
         return root
     }
@@ -74,5 +77,9 @@ class HomeFragment : Fragment() {
         view.pieChart.isDrawHoleEnabled = true
         view.pieChart.description.isEnabled = false
         view.pieChart.centerText = "test"
+    }
+
+    fun UpdateLayout(item: TextView){
+        item.text = model.list.count().toString()
     }
 }
