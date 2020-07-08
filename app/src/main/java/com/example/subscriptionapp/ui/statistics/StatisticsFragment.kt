@@ -19,10 +19,29 @@ class StatisticsFragment : Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        statisticsViewModel =
-            ViewModelProviders.of(this).get(StatisticsViewModel::class.java)
+        statisticsViewModel = ViewModelProviders.of(this).get(StatisticsViewModel::class.java)
+
         val root = inflater.inflate(R.layout.fragment_statistics, container, false)
 
+        val monthValue: TextView = root.findViewById(R.id.text_profile)
+        statisticsViewModel.costPerMonthValue.observe(viewLifecycleOwner, Observer {
+            monthValue.text = it
+        })
+
+        val yearValue: TextView = root.findViewById(R.id.text_profile)
+        statisticsViewModel.costPerYearValue.observe(viewLifecycleOwner, Observer {
+            yearValue.text = it
+        })
+
+        val mostExpensiveValue: TextView = root.findViewById(R.id.text_profile)
+        statisticsViewModel.costOfMostExpensiveValue.observe(viewLifecycleOwner, Observer {
+            mostExpensiveValue.text = it
+        })
+
+        val cheapestValue: TextView = root.findViewById(R.id.text_profile)
+        statisticsViewModel.costOfCheapestValue.observe(viewLifecycleOwner, Observer {
+            cheapestValue.text = it
+        })
         return root
     }
 }

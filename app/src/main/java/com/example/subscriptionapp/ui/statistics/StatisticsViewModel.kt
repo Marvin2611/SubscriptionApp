@@ -6,8 +6,21 @@ import androidx.lifecycle.ViewModel
 
 class StatisticsViewModel : ViewModel(){
 
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is Statistics Fragment"
+
+    private val monthValue = MutableLiveData<String>().apply {
+        value = "14.44 "
     }
-    val text: LiveData<String> = _text
+    val costPerMonthValue: LiveData<String> = monthValue
+    private val yearValue = MutableLiveData<String>().apply {
+        value = "14.44 "
+    }
+    val costPerYearValue: LiveData<String> = yearValue
+    private val mostExpensiveValue = MutableLiveData<String>().apply {
+        value = "14.44 "
+    }
+    val costOfMostExpensiveValue: LiveData<String> = mostExpensiveValue
+    private val cheapestValue = MutableLiveData<String>().apply {
+        value = "14.44 "
+    }
+    val costOfCheapestValue: LiveData<String> = cheapestValue
 }

@@ -6,13 +6,110 @@
     android:layout_height="match_parent"
     tools:context=".ui.statistics.StatisticsFragment">
 
-    <TextView
-        android:id="@+id/text_statistics"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:textAlignment="center"
-        android:textSize="20sp"
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@string/stat_month"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cost per Month"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/costPerMonthValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/space1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@string/stat_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cost per year"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/costPerYearValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/space2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@string/stat_most_expensive"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Most expensive Abo"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/mostExpensiveValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/space3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@string/stat_cheapest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cheapest Abo"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/cheapestValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/Space4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@string/stat_average"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Average cost per Abo"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/averageValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/space5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
