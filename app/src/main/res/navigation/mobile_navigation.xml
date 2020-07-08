@@ -22,5 +22,18 @@
     <fragment
         android:id="@+id/navigation_sublist"
         android:name="com.example.subscriptionapp.ui.sublist.SubListFragment"
-        android:label="@string/title_sublist" />
+        android:label="@string/title_sublist" >
+        <action
+            android:id="@+id/action_navigation_sublist_to_navigation_sublistadd"
+            app:destination="@id/navigation_sublistadd" />
+    </fragment>
+    <fragment
+        android:id="@+id/navigation_sublistadd"
+        android:name="com.example.subscriptionapp.ui.sublistadd.SubListAddFragment"
+        android:label="@string/title_sublistadd"
+        tools:layout="@layout/fragment_sublistadd" >
+        <action
+            android:id="@+id/action_navigation_sublistadd_to_navigation_sublist"
+            app:destination="@id/navigation_sublist" />
+    </fragment>
 </navigation>
