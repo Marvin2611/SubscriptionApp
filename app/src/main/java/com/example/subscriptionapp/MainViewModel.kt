@@ -40,7 +40,7 @@ class MainViewModel : ViewModel(){
         stats.GetPercentages(abo)
         stats.TotalSumPerDay()
         stats.GetHighest()
-        stats.GetLowest()
+        stats.GetLowest(abo)
         stats.GetPercentages(abo)
         stats.GetAverage()
     }

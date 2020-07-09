@@ -126,6 +126,9 @@ class SubListAddFragment : Fragment() {
         aboViewModelTemplate.color = color
 
         model.list.add(aboViewModelTemplate)
-        model.updateAbo(model.list[model.list.count() - 1])
+        model.list.forEach(){
+          model.updateAbo(it)
+        }
+        //model.updateAbo(model.list[model.list.count() - 1])
     }
 }

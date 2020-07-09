@@ -42,10 +42,10 @@ class StatisticsFragment : Fragment() {
     }
 
     fun UpdateLayout(pmV: TextView, pyV: TextView, hV: TextView, lV: TextView, aV: TextView) {
-        pmV.text = model.stats.costPerMonthAll.toString()
-        pyV.text = model.stats.costPerYearAll.toString()
-        hV.text = model.stats.GetHighest().toString()
-        lV.text= model.stats.GetLowest().toString()
-        aV.text = model.stats.GetAverage().toString()
+        pmV.text = (model.stats.TotalSum*30).toString()+"€"
+        pyV.text = (model.stats.TotalSum*365).toString()+"€"
+        hV.text = (model.stats.highest*30).toString()+"€"
+        lV.text= (model.stats.lowest*30).toString()+"€"
+        aV.text = (model.stats.average*30).toString()+"€"
     }
 }

@@ -36,13 +36,13 @@ class HomeFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_home, container, false)
 
         val activeSubscriptionValue: TextView = root.findViewById(R.id.active_subscriptions_value)
-        activeSubscriptionValue.text = "5"
+        activeSubscriptionValue.text = "0"
 
         val totalCostPerMonthValue: TextView = root.findViewById(R.id.total_cost_value)
-        totalCostPerMonthValue.text = "55€"
+        totalCostPerMonthValue.text = "0€"
 
         val averageCostPerSubPerMonthValue: TextView = root.findViewById(R.id.average_cost_value)
-        averageCostPerSubPerMonthValue.text = "11€"
+        averageCostPerSubPerMonthValue.text = "0€"
 
         //Add the PieChart here as a value
         val pieChart: PieChart = root.findViewById(R.id.pieChart);
@@ -50,8 +50,9 @@ class HomeFragment : Fragment() {
 
         //Show active subscriptions
         val avg: TextView = root.findViewById(R.id.average_cost_value)
+        val tot:TextView=root.findViewById(R.id.total_cost_value)
         val sub: TextView = root.findViewById(R.id.active_subscriptions_value)
-        UpdateLayout(sub, avg, root.rootView)
+        UpdateLayout(sub, avg,tot, root.rootView)
 
 
         return root
@@ -86,9 +87,10 @@ class HomeFragment : Fragment() {
         }
     }
 
-    fun UpdateLayout(item: TextView,item2: TextView, v: View){
+    fun UpdateLayout(item: TextView,item2: TextView,item3:TextView, v: View){
         item.text = model.stats.AboCount().toString()
-        item2.text = model.stats.average.toString()
-        v.pieChart.centerText = model.stats.TotalSum.toString()
+        item2.text = model.stats.average.toString()+"€"
+        item3.text=(model.stats.TotalSum*30).toString()+"€"
+        v.pieChart.centerText = (model.stats.TotalSum*30).toString()+"€"
     }
 }
