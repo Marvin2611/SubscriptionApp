@@ -38,11 +38,6 @@ class SubListFragment : Fragment() {
             findNavController().navigate(R.id.action_navigation_sublist_to_navigation_sublistadd)
         }
 
-        val button2 = root.findViewById(R.id.navigation_sublist_amount) as Button
-        button2.setOnClickListener{
-            Toast.makeText(activity?.applicationContext,"How many items: " + model.list.count(), Toast.LENGTH_SHORT).show()
-        }
-
         val listView: ListView = root.findViewById(R.id.sublist_view)
 
         val adapter:ArrayAdapter<AboViewModel> = ArrayAdapter(root.context,android.R.layout.simple_list_item_1,model.list)

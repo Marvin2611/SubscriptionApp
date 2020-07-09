@@ -11,21 +11,17 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/navigation_sublistadd_button"
-            android:layout_height="100dp"
-            android:layout_width="200dp"
-            android:text="@string/button_sublistadd" />
-        <Button
-            android:id="@+id/navigation_sublist_amount"
-            android:layout_height="100dp"
-            android:layout_width="200dp"
-            android:text="How many items"/>
-
         <ListView
             android:id="@+id/sublist_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawSelectorOnTop="false"/>
+            android:drawSelectorOnTop="false" />
+
+        <Button
+            android:id="@+id/navigation_sublistadd_button"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="@string/button_sublistadd" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
