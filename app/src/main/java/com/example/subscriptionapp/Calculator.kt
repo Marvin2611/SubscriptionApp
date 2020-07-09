@@ -56,7 +56,7 @@ class Calculator(abos: List<AboViewModel>) {
                 tmp=it.costsPerMonth
             }
         }
-        lowest = RoundNumber(tmp)
+        lowest = tmp
         return lowest
     }
     //The subscription with the lowest costs
@@ -67,7 +67,7 @@ class Calculator(abos: List<AboViewModel>) {
                 tmp=it.costsPerMonth
             }
         }
-        highest = RoundNumber(tmp)
+        highest = tmp
         return highest
     }
 
