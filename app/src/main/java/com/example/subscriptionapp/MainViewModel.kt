@@ -33,10 +33,10 @@ class MainViewModel : ViewModel(){
     }
 
     fun updateAbo(abo: AboViewModel) {
-        stats.CostPerYear(abo)
         stats.CostPerDay(abo)
-        stats.CostPerMonth(abo)
         stats.CostPerWeek(abo)
+        stats.CostPerMonth(abo)
+        stats.CostPerYear(abo)
         stats.GetPercentages(abo)
         stats.TotalSumPerDay()
         stats.GetHighest()
