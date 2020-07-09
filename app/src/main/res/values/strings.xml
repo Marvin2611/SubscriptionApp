@@ -26,6 +26,9 @@
     <string name="profile_p">P</string>
     <string name="profile_d">D</string>
 
+    <string name="stat_amount">Subscription Amount:</string>
+    <string name="stat_day">Cost per Day:</string>
+    <string name="stat_week">Cost per Week:</string>
     <string name="stat_month">Cost per Month:</string>
     <string name="stat_year">Cost per Year:</string>
     <string name="stat_most_expensive">Most expensive Subscriptions:</string>

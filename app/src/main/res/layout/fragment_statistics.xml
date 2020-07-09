@@ -16,6 +16,48 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/SubAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/stat_amount"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/SubAmountCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/textView_spacing_bottom"
+            android:text=""
+            android:textColor="#000000" />
+        <TextView
+            android:id="@+id/costPerDay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/stat_day"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/costPerDayValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/textView_spacing_bottom"
+            android:text=""
+            android:textColor="#000000" />
+        <TextView
+            android:id="@+id/costPerWeek"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/stat_week"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/costPerWeekValue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/textView_spacing_bottom"
+            android:text=""
+            android:textColor="#000000" />
+        <TextView
             android:id="@+id/costPerMonth"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
