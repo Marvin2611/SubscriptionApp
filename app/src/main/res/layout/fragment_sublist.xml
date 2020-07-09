@@ -17,7 +17,6 @@
 
             <ListView
                 android:id="@+id/sublist_view"
-                android:background="@color/blue"
                 android:layout_width="match_parent"
                 android:layout_height="400dp"
                 android:drawSelectorOnTop="false"
