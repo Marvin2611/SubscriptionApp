@@ -1,5 +1,7 @@
 package com.example.subscriptionapp
 
+import java.math.BigDecimal
+import java.math.RoundingMode
 import kotlin.math.round
 
 class Calculator(abos: List<AboViewModel>) {
@@ -8,6 +10,11 @@ class Calculator(abos: List<AboViewModel>) {
     var highest: Double = 0.0
     var lowest: Double = 0.0
     var TotalSum:Double = 0.0
+
+    fun RoundNumber(nmb: Double) : Double{
+        val tmp = BigDecimal(nmb).setScale(2, RoundingMode.HALF_EVEN)
+        return tmp.toDouble()
+    }
 
     //Even out the subscriptions
     fun TotalSumPerDay(){
@@ -24,17 +31,21 @@ class Calculator(abos: List<AboViewModel>) {
 
     //The cost from one subscription in the complete period
     fun CostPerDay(abo: AboViewModel){
-        abo.costsPerDay=abo.cost/abo.abo_variant
+        abo.costsPerDay = abo.cost/abo.abo_variant
+        abo.costsPerDay = RoundNumber(abo.costsPerDay)
     }
     fun CostPerWeek(abo: AboViewModel){
-        abo.costsPerWeek=abo.costsPerDay*7
+        abo.costsPerWeek = abo.costsPerDay*7
+        abo.costsPerWeek = RoundNumber(abo.costsPerWeek)
     }
 
     fun CostPerMonth(abo: AboViewModel){
-        abo.costsPerMonth=abo.costsPerDay*30
+        abo.costsPerMonth = abo.costsPerDay*30
+        abo.costsPerMonth = RoundNumber(abo.costsPerMonth)
     }
     fun CostPerYear(abo: AboViewModel){
-        abo.costsPerYear=abo.costsPerDay*360
+        abo.costsPerYear = abo.costsPerDay*360
+        abo.costsPerYear = RoundNumber(abo.costsPerYear)
     }
     //The subscription with the highest cost
     fun GetLowest(abo:AboViewModel):Double{
@@ -45,8 +56,8 @@ class Calculator(abos: List<AboViewModel>) {
                 tmp=it.costsPerMonth
             }
         }
-        lowest=tmp
-        return tmp
+        lowest = RoundNumber(tmp)
+        return lowest
     }
     //The subscription with the lowest costs
     fun GetHighest():Double{
@@ -56,8 +67,8 @@ class Calculator(abos: List<AboViewModel>) {
                 tmp=it.costsPerMonth
             }
         }
-        highest=tmp
-        return tmp
+        highest = RoundNumber(tmp)
+        return highest
     }
 
     //Average from all subscriptions
@@ -65,7 +76,8 @@ class Calculator(abos: List<AboViewModel>) {
         var tmp:Double=0.0
         list.forEach {
             tmp+=it.costsPerMonth
-            }
+            RoundNumber(tmp)
+        }
         average=tmp/list.size
         return tmp/list.size
     }
@@ -76,12 +88,6 @@ class Calculator(abos: List<AboViewModel>) {
             tmp+=it.costsPerDay
             abo.PercentageCost=100/tmp*abo.costsPerDay
         }
-    }
-
-    fun Double.round(decimals: Int): Double {
-        var multiplier = 1.0
-        repeat(decimals) { multiplier *= 10 }
-        return round(this * multiplier) / multiplier
     }
 }
 
