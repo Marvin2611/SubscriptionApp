@@ -19,6 +19,7 @@ import com.example.subscriptionapp.MainViewModel
 import com.example.subscriptionapp.R
 import java.lang.Error
 import java.util.*
+import kotlin.collections.ArrayList
 
 
 class SubListAddFragment : Fragment() {
@@ -40,7 +41,12 @@ class SubListAddFragment : Fragment() {
         val editTextName: EditText = root.findViewById(R.id.addlistelement_name)
         val editTextPeriod: EditText = root.findViewById(R.id.addlistelement_period)
         val editTextCost: EditText = root.findViewById(R.id.addlistelement_cost)
-        val editTextColor: EditText = root.findViewById(R.id.addlistelement_color)
+        val editColorList: ArrayList<Button> = ArrayList()
+        editColorList.add(root.findViewById(R.id.addlistelement_color1))
+        editColorList.add(root.findViewById(R.id.addlistelement_color2))
+        editColorList.add(root.findViewById(R.id.addlistelement_color3))
+        editColorList.add(root.findViewById(R.id.addlistelement_color4))
+        editColorList.add(root.findViewById(R.id.addlistelement_color5))
 
         val textName: TextView = root.findViewById(R.id.listelement_name)
         val textPeriod: TextView = root.findViewById(R.id.listelement_period)
@@ -66,7 +72,7 @@ class SubListAddFragment : Fragment() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                UpdateTextBoxes(editTextName, textName)
+                UpdateTextBoxes(editTextPeriod, textPeriod)
             }
         })
         editTextCost.addTextChangedListener(object : TextWatcher {
@@ -77,25 +83,30 @@ class SubListAddFragment : Fragment() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                UpdateTextBoxes(editTextName, textName)
+                UpdateTextBoxes(editTextCost, textCost)
             }
         })
-        editTextColor.addTextChangedListener(object : TextWatcher {
-            override fun afterTextChanged(s: Editable?) {
-            }
 
-            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+        editColorList.forEach(){
+            it.setOnClickListener(){
+                if(it.id == editColorList[0].id){
+                    textColor.text = "#FF3366"
+                } else if(it.id == editColorList[1].id){
+                    textColor.text = "#69995D"
+                } else if(it.id == editColorList[2].id){
+                    textColor.text = "#6EB4D1"
+                } else if(it.id == editColorList[3].id){
+                    textColor.text = "#F4E04D"
+                } else if(it.id == editColorList[4].id){
+                    textColor.text = "#792359"
+                }
             }
-
-            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                UpdateTextBoxes(editTextName, textName)
-            }
-        })
+        }
 
         val button = root.findViewById(R.id.addlistelement_button) as Button
         button.setOnClickListener{
 
-            AddListItem(root.rootView, editTextName.text.toString(), editTextPeriod.text.toString(), editTextCost.text.toString(), editTextColor.text.toString())
+            AddListItem(root.rootView, editTextName.text.toString(), editTextPeriod.text.toString(), editTextCost.text.toString(), textColor.text.toString())
 
             findNavController().navigate(R.id.action_navigation_sublistadd_to_navigation_sublist)
         }

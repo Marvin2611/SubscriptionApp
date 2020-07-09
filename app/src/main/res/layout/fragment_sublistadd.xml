@@ -83,13 +83,41 @@
                     android:layout_height="wrap_content"
                     android:layout_weight=".8"
                     android:text="Farbe"/>
-                <EditText
-                    android:id="@+id/addlistelement_color"
-                    android:layout_width="match_parent"
+                <Button
+                    android:id="@+id/addlistelement_color1"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_weight=".2"
-                    android:ems="10"
-                    android:inputType="textPersonName"/>
+                    android:layout_weight=".27"
+                    android:background="@color/red"/>
+                <Button
+                    android:id="@+id/addlistelement_color2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".27"
+                    android:text="@string/profile_g"
+                    android:background="@color/green"/>
+                <Button
+                    android:id="@+id/addlistelement_color3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".27"
+                    android:text="@string/profile_b"
+                    android:background="@color/blue"/>
+                <Button
+                    android:id="@+id/addlistelement_color4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".27"
+                    android:text="@string/profile_y"
+                    android:background="@color/yellow"/>
+                <Button
+                    android:id="@+id/addlistelement_color5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight=".27"
+                    android:text="@string/profile_p"
+                    android:background="@color/purple"/>
+
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"

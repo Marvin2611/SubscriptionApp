@@ -61,15 +61,21 @@ class HomeFragment : Fragment() {
     //Set the PieChart Data
     fun setPieChartData(view: View) {
         val listPie = ArrayList<PieEntry>()
-        val listColors = ArrayList<Int>()
 
         //Add PieChart Data here
         AddPieChart(view, listPie)
-        listColors.add(resources.getColor(R.color.colorPrimary))
+        val colors: ArrayList<Int> = ArrayList()
+        colors.add(resources.getColor(R.color.red))
+        colors.add(resources.getColor(R.color.green))
+        colors.add(resources.getColor(R.color.blue))
+        colors.add(resources.getColor(R.color.yellow))
+        colors.add(resources.getColor(R.color.purple))
+
+        colors.add(resources.getColor(R.color.colorPrimary))
 
         //Connect colors to the PieChart
         val pieDataSet = PieDataSet(listPie, "")
-        pieDataSet.colors = listColors
+        pieDataSet.colors = colors
 
         //Connect data to the PieChart
         val pieData = PieData(pieDataSet)
